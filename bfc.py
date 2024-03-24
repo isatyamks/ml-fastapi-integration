@@ -18,6 +18,6 @@ def create_folders(base_directory, folder_names):
 
 
 base_directory = "C:/YourBaseDirectory"  # Change this to your desired base directory
-folder_names = ["Folder1", "Folder2", "Folder3"]
+folder_names = ["Folder1", "Folder2", "Folder3","Folder4","Folder5","Folder6","Folder7"]
 
 create_folders(base_directory, folder_names)
