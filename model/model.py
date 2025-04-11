@@ -34,10 +34,11 @@ X_test_vect = vectorizer.transform(X_test).toarray()
 model = LogisticRegression()
 model.fit(X_train_vect, Y_train)
 
-# with open('saved_model\\model.pkl', 'wb') as file:
-#     pickle.dump(model, file)
-# with open('saved_model\\vectorizer.pkl', 'wb') as file:
-#     pickle.dump(vectorizer, file)
+with open('saved_model\\model.pkl', 'wb') as file:
+    pickle.dump(model, file)
+with open('saved_model\\vectorizer.pkl', 'wb') as file:
+    pickle.dump(vectorizer, file)
+
 
 def predict(text):
     cleaned_text = fun_text(text)
@@ -45,6 +46,3 @@ def predict(text):
     prediction = model.predict(vect_text)
     return prediction[0]
 
-# Example usage
-input_text = "i am sad"
-print(f"Prediction: {predict(input_text)}")
